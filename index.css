@@ -1,0 +1,121 @@
+/* Reset and Box Sizing */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Flexbox Centering for Main and Form */
+main, form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main Section Styling */
+main {
+    height: 85vh;
+    background-color: #F3F7EC;
+    transition: background-color 0.3s ease-in-out;
+}
+
+main:hover {
+    background-color: #E0EFD8;
+}
+
+main > div {
+    margin: 1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+main > div:hover {
+    transform: scale(1.05);
+}
+
+/* Form Styling */
+form {
+    height: 15vh;
+    background-color: #E88D67;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+form:hover {
+    background-color: #E67A54;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Field Styling */
+input {
+    width: 40vw;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-bottom: 3px solid #006989;
+    background: transparent;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #003D4D;
+    background-color: #F3F7EC;
+}
+
+/* Button Styling */
+button {
+    height: 3rem;
+    width: 8rem;
+    border: none;
+    background-color: #005C78;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    color: #F3F7EC;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #004D64;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    input {
+        width: 60vw;
+        font-size: 1.2rem;
+    }
+
+    button {
+        width: 7rem;
+        font-size: 1.2rem;
+    }
+
+    main {
+        height: auto;
+        padding: 2rem 0;
+    }
+
+    form {
+        height: auto;
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    button {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
